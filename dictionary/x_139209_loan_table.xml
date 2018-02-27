@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="Loan Table" max_length="40" name="x_139209_loan_table" sizeclass="7" type="collection">
+        <element attributes="omit_sys_original=true" label="Amount" max_length="20" name="u_amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Graduate Program" max_length="40" name="u_graduate_program" type="string">
+            <choice>
+                <element label="Medical" sequence="0" value="medical"/>
+                <element label="Dental" sequence="1" value="dental"/>
+                <element label="Law" sequence="2" value="law"/>
+                <element label="Business" sequence="3" value="business"/>
+                <element label="Other" sequence="4" value="other"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="Income" max_length="20" name="u_income" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Length of loan" max_length="40" name="u_length_of_loan" type="string">
+            <choice>
+                <element label="1 year" sequence="0" value="1 year"/>
+                <element label="2 years" sequence="1" value="2 years"/>
+                <element label="3 years" sequence="2" value="3 years"/>
+                <element label="4-5 years" sequence="3" value="4-5 years"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="u_loan_city" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="u_loan_state" read_only="true" type="string"/>
+        <element label="LTV" max_length="40" name="u_ltv" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Please specify" max_length="40" name="u_please_specify" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Purpose" max_length="40" name="u_purpose" type="string">
+            <choice>
+                <element label="Undergraduate" sequence="0" value="undergraduate"/>
+                <element label="Graduate" sequence="1" value="graduate"/>
+                <element label="Further Education" sequence="2" value="further education"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Zip code" max_length="40" name="u_zip_code" type="string"/>
+    </element>
+</database>

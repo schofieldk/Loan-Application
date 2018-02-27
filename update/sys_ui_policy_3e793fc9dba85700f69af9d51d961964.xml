@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_139209_loan_table">u_purpose=^ORu_purposeINundergraduate,further education^EQ<item endquery="false" field="u_purpose" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="false" field="u_purpose" goto="false" newquery="false" operator="IN" or="true" value="undergraduate,further education"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Hide Graduate Program</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-26 15:41:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3e793fc9dba85700f69af9d51d961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide Graduate Program</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loan" source="x_139209_loan">7de7fb89dba85700f69af9d51d961958</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loan">7de7fb89dba85700f69af9d51d961958</sys_scope>
+        <sys_update_name>sys_ui_policy_3e793fc9dba85700f69af9d51d961964</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-26 15:41:14</sys_updated_on>
+        <table>x_139209_loan_table</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

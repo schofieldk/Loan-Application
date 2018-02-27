@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Imp Tmpl X 139209 Loan Table" max_length="40" name="u_imp_tmpl_x_139209_loan_table" type="collection">
+        <element attributes="import_attribute_name=Amount" label="Amount" max_length="20" name="u_amount" type="integer"/>
+        <element attributes="import_attribute_name=Applicant,edge_encryption_enabled=true" label="Applicant" max_length="40" name="u_applicant" type="string"/>
+        <element attributes="import_attribute_name=Description,edge_encryption_enabled=true" label="Description" max_length="4000" name="u_description" type="string"/>
+        <element attributes="import_attribute_name=Graduate Program,edge_encryption_enabled=true" label="Graduate Program" max_length="40" name="u_graduate_program" type="string"/>
+        <element attributes="import_attribute_name=Income" label="Income" max_length="20" name="u_income" type="integer"/>
+        <element attributes="import_attribute_name=Length of loan,edge_encryption_enabled=true" label="Length of loan" max_length="40" name="u_length_of_loan" type="string"/>
+        <element attributes="import_attribute_name=Please specify,edge_encryption_enabled=true" label="Please specify" max_length="40" name="u_please_specify" type="string"/>
+        <element attributes="import_attribute_name=Purpose,edge_encryption_enabled=true" label="Purpose" max_length="40" name="u_purpose" type="string"/>
+        <element attributes="import_attribute_name=Short description,edge_encryption_enabled=true" label="Short description" max_length="160" name="u_short_description" type="string"/>
+        <element attributes="import_attribute_name=Underwriter,edge_encryption_enabled=true" label="Underwriter" max_length="40" name="u_underwriter" type="string"/>
+    </element>
+</database>

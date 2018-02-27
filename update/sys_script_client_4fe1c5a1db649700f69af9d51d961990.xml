@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_zip_code</field>
+        <global>true</global>
+        <messages/>
+        <name>GetUsingZIP</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+    // Instantiate the GetUsingZIP Script Include 
+	var ga = new GlideAjax('GetUsingZIP');
+	
+	// Specify the getCityState method
+	ga.addParam('sysparm_name','getCityState');
+	
+	// Pass the ZIP Code
+	ga.addParam('sysparm_zip', g_form.getValue('u_zip_code'));
+	
+	// Send the request to the server
+	ga.getXML(setCityState);
+	
+	// When the response is back from the server
+	function setCityState(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		//alert(answer);
+		var parsed = JSON.parse(answer);
+		var city = parsed.places[0]['place name'];
+		var state = parsed.places[0]['state abbreviation'];
+		
+		// clear the state and city fields and then populate with returned values.
+		g_form.clearValue('u_loan_state');
+		g_form.clearValue('u_loan_city');
+		g_form.setValue('u_loan_state',state);
+		g_form.setValue('u_loan_city',city);
+	}
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-27 15:41:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4fe1c5a1db649700f69af9d51d961990</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>GetUsingZIP</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loan" source="x_139209_loan">7de7fb89dba85700f69af9d51d961958</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loan">7de7fb89dba85700f69af9d51d961958</sys_scope>
+        <sys_update_name>sys_script_client_4fe1c5a1db649700f69af9d51d961990</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-27 16:47:28</sys_updated_on>
+        <table>x_139209_loan_table</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Loan Dashboard">b3586aaddb289700f69af9d51d96193e</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-27 23:03:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da6866addb289700f69af9d51d961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b3586aaddb289700f69af9d51d96193e</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loan" source="x_139209_loan">7de7fb89dba85700f69af9d51d961958</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loan">7de7fb89dba85700f69af9d51d961958</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_da6866addb289700f69af9d51d961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-27 23:03:05</sys_updated_on>
+        <tab display_value="New Tab">d26866addb289700f69af9d51d96195f</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>
